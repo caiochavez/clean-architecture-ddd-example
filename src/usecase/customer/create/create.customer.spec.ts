@@ -36,4 +36,20 @@ describe('CreateCustomer UseCase Unit Tests', () => {
     })
   })
 
+  it('should throw an error when name is missing', async () => {
+    const customerRepository = MockRepository()
+    const useCase = new CreateCustomerUseCase(customerRepository)
+
+    input.name = ''
+    await expect(useCase.execute(input)).rejects.toThrow('name is required')
+  })
+
+  it('should throw an error when street is missing', async () => {
+    const customerRepository = MockRepository()
+    const useCase = new CreateCustomerUseCase(customerRepository)
+
+    input.address.street = ''
+    await expect(useCase.execute(input)).rejects.toThrow('Street is required')
+  })
+
 })
