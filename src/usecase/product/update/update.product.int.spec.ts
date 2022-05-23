@@ -30,7 +30,7 @@ describe('UpdateProduct Usecase Integration Tests', () => {
     const product = new Product('123', 'Product 1', 10)
     await repository.create(product)
 
-    const input = { id: '123', name: 'Product 1', price: 10 }
+    const input = { id: '123', name: 'Product 1 Updated', price: 15 }
     const output = await useCase.execute(input)
 
     expect(output).toStrictEqual({

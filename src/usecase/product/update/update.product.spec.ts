@@ -16,7 +16,7 @@ describe('UpdateProduct Usecase Unit Tests', () => {
     const repository = MockRepository()
     const useCase = new UpdateProductUseCase(repository)
 
-    const input = { id: '123', name: 'Product 1', price: 10 }
+    const input = { id: '123', name: 'Product 1 Updated', price: 15 }
     const output = await useCase.execute(input)
 
     expect(output).toStrictEqual({
