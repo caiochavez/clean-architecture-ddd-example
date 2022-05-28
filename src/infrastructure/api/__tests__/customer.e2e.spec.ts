@@ -1,5 +1,4 @@
 import { app, sequelize } from '../express'
-// @ts-ignore
 import request from 'supertest'
 
 describe('Customer E2E tests', () => {
