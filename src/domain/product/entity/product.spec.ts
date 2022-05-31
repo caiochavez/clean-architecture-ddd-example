@@ -30,7 +30,7 @@ describe("Product unit tests", () => {
 
     expect(() => {
       const product = new Product('', '', undefined)
-    }).toThrow('product: id is required,product: name is required,product: price must be greater than 0')
+    }).toThrow('product: id is required,product: name is required,product: price is required')
 
   })
 
