@@ -1,4 +1,4 @@
-import Notification, { NotificationErrorProps } from './notification'
+import { NotificationErrorProps } from './notification'
 
 export default class NotificationError extends Error {
 
